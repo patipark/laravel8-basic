@@ -4,3 +4,15 @@ composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
 #แก้ไขไฟล์ C:\Windows\System32\drivers\etc\hosts
 เพิ่ม 127.0.0.1       laravel8vuejs3.site
 
+
+#สร้าง apache virtual host ในไฟล์ C:\Apache24\conf\extra\httpd-vhost.conf
+#แล้วก็สามารถรัน http://laravel8vuejs3.site/
+<VirtualHost *:80>
+    ServerAdmin patipark@profile.co.th
+    DocumentRoot "D:\MyWebApps\Laravel\laravel8vuejs3\public"
+    ServerName laravel8vuejs3.site
+    ServerAlias laravel8vuejs3.site
+    ErrorLog "logs/laravel8vuejs3.site-error_log.log"
+    CustomLog "logs/laravel8vuejs3.site-access_log.log" common
+</VirtualHost>
+
