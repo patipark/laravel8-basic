@@ -25,3 +25,13 @@ composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
 #3.downlaod images ที่ขอบมาวางไว้ใน public\assets\images
 #4.สร้างไฟล์ public\assets\css\custom.css เพื่อ custom css เช่น fonts layout ต่างๆ
 
+
+#สร้างฐานข้อมูล ในที่นี้ใช้ mysql/mariadb ชื่อว่า laravel8vuejs
+#แก้ไขไฟล์ .env ที่ root path โดยแก้ไขค่า config ในส่วนฐานข้อมูลต่างๆ เช่น
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel8vuejs
+DB_USERNAME=root
+DB_PASSWORD=1234
+
