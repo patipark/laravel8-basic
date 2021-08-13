@@ -22,5 +22,5 @@ composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
 #เตรียม assets ที่จะใช้ในการวาง layout
 #1.download bootstrap 5 มาวางไว้ใน public/assets/bootstrap
 #2.donwload fonts จาก google fonts ชื่อ Mali มาวางใน public/assets/fonts/Mali
-
+#3.downlaod images ที่ขอบมาวางไว้ใน public\assets\images
 
