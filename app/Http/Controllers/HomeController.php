@@ -19,7 +19,7 @@ class HomeController extends Controller
     }
 
     public function contact(){
-        return 'หน้า contact';
+        return view('pages.contact');
     }
 
     public function login(){
