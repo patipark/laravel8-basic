@@ -11,7 +11,7 @@ class HomeController extends Controller
     }
 
     public function about(){
-        return 'หน้า about';
+        return view('pages.about');
     }
 
     public function service(){
