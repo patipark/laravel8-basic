@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,8 +82,15 @@ Route::post('product', function () {
 
 ########## send route to controller กรณีไม่ได้ use namespace class controller ###########
 // // Route::get('/','HomeController@home'); // version < 8
-Route::get('/','App\Http\Controllers\HomeController@home'); // version 8 up
-Route::get('/service','App\Http\Controllers\HomeController@service');
-Route::get('/about','App\Http\Controllers\HomeController@about');
-Route::get('/contact','App\Http\Controllers\HomeController@contact');
-Route::get('/login','App\Http\Controllers\HomeController@login');
+// Route::get('/','App\Http\Controllers\HomeController@home'); // version 8 up
+// Route::get('/service','App\Http\Controllers\HomeController@service');
+// Route::get('/about','App\Http\Controllers\HomeController@about');
+// Route::get('/contact','App\Http\Controllers\HomeController@contact');
+// Route::get('/login','App\Http\Controllers\HomeController@login');
+
+##### การ send route to controller แบบ use namespace class controller ไว้ด้านบน ของ Laravel 8 (แนะนำแบบนี้)
+Route::get('/',[ HomeController::class , 'home']); // version 8 up
+Route::get('/service',[ HomeController::class , 'service']);
+Route::get('/about',[ HomeController::class , 'about']);
+Route::get('/contact',[ HomeController::class , 'contact']);
+Route::get('/login',[ HomeController::class , 'login']);
