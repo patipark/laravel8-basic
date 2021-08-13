@@ -23,6 +23,6 @@ class HomeController extends Controller
     }
 
     public function login(){
-        return 'หน้า login';
+        return view('pages.login');
     }
 }
