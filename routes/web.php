@@ -52,3 +52,8 @@ Route::get('member/{id?}', function ($id = null) {
 Route::get('member/{name?}', function ($name = null) {
     return 'Member name=' .($name ?? '');
 });
+
+// format parameter string
+Route::get('category/{name}', function ($name) {
+    return 'Category name=' . $name;
+})->where(['name' => '[A-Za-z]+']);
