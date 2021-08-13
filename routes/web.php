@@ -73,3 +73,8 @@ Route::get('product/category/set/{name}', function ($name) {
 Route::get('/csrf', function () {
     return csrf_token();
 });
+
+#สอบเรียก method post ด้วยการแนบ csrf token กับ header โดยตั้งชื่อว่า X-CSRF-TOKEN = token ที่ได้จาก route ด้านบน
+Route::post('product', function () {
+    return 'product page xxxxxxx';
+});
