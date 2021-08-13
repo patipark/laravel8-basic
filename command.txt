@@ -19,4 +19,7 @@ composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
 #การสร้าง controller คำสั่ง php artisan make:controller HomeController
 #จะเกิดไฟล์ ที่ app\Http\Controllers\HomeController.php
 
+#เตรียม assets ที่จะใช้ในการวาง layout
+#1.download bootstrap 5 มาวางไว้ใน public/assets/bootstrap
+
 
