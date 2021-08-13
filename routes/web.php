@@ -37,3 +37,8 @@ Route::get('contact', function () {
 Route::get('login', function () {
     return 'Lgin page';
 });
+
+# route แบบมี parameter
+Route::get('user/{id}', function ($id) {
+    return 'User page id=' . $id;
+});
