@@ -23,4 +23,5 @@ composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
 #1.download bootstrap 5 มาวางไว้ใน public/assets/bootstrap
 #2.donwload fonts จาก google fonts ชื่อ Mali มาวางใน public/assets/fonts/Mali
 #3.downlaod images ที่ขอบมาวางไว้ใน public\assets\images
+#4.สร้างไฟล์ public\assets\css\custom.css เพื่อ custom css เช่น fonts layout ต่างๆ
 
