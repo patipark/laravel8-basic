@@ -68,3 +68,5 @@ Migrated:  2021_08_13_154700_create_employees_table (19.40ms)
 Seeding: Database\Seeders\EmployeesSeeder
 Seeded:  Database\Seeders\EmployeesSeeder (16.43ms)
 Database seeding completed successfully.
+
+# คำสั่งการสร้าง migration และ db:seed พร้อมกัน php artisan migrate:fresh --seed
