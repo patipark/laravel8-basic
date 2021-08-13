@@ -15,7 +15,7 @@ class HomeController extends Controller
     }
 
     public function service(){
-        return 'หน้า service';
+        return view('pages.service');
     }
 
     public function contact(){
