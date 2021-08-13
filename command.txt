@@ -47,3 +47,6 @@ Migrated:  2019_08_19_000000_create_failed_jobs_table (15.98ms)
 # คำสั่ง Rollback Migrations (ลบตารางออกจากฐานข้อมูล) 
 # php artisan migrate:rollback
 
+# คำสั่ง rollback และ run (ลบและสร้างในคำสั่งเดียวกัน)
+# php artisan migrate:refresh
+
