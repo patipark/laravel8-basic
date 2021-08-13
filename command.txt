@@ -43,3 +43,7 @@ Migrating: 2014_10_12_100000_create_password_resets_table
 Migrated:  2014_10_12_100000_create_password_resets_table (14.64ms)
 Migrating: 2019_08_19_000000_create_failed_jobs_table
 Migrated:  2019_08_19_000000_create_failed_jobs_table (15.98ms)
+
+# คำสั่ง Rollback Migrations (ลบตารางออกจากฐานข้อมูล) 
+# php artisan migrate:rollback
+
