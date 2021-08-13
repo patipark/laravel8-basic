@@ -57,3 +57,8 @@ Route::get('member/{name?}', function ($name = null) {
 Route::get('category/{name}', function ($name) {
     return 'Category name=' . $name;
 })->where(['name' => '[A-Za-z]+']);
+
+// format parameter integer
+Route::get('group/{id}', function ($id) {
+    return 'Category name=' . $id;
+})->where(['id' => '[0-9]+']);
