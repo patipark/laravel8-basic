@@ -45,5 +45,10 @@ Route::get('user/{id}', function ($id) {
 
 # route แบบมี parameter และแบบ option คือส่งหรือไม่ส่งไปก็ได้
 Route::get('member/{id?}', function ($id = null) {
-    return 'Member page id=' . ($id ?? '');
+    return 'Member id=' . ($id ?? '');
+});
+
+// optional parameter?
+Route::get('member/{name?}', function ($name = null) {
+    return 'Member name=' .($name ?? '');
 });
