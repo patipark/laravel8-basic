@@ -16,3 +16,5 @@ composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
     CustomLog "logs/laravel8vuejs3.site-access_log.log" common
 </VirtualHost>
 
+#การสร้าง controller คำสั่ง php artisan make:controller HomeController
+#จะเกิดไฟล์ ที่ app\Http\Controllers\HomeController.php
