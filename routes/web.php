@@ -78,3 +78,11 @@ Route::get('/csrf', function () {
 Route::post('product', function () {
     return 'product page xxxxxxx';
 });
+
+########## send route to controller กรณีไม่ได้ use namespace class controller ###########
+// // Route::get('/','HomeController@home'); // version < 8
+Route::get('/','App\Http\Controllers\HomeController@home'); // version 8 up
+Route::get('/service','App\Http\Controllers\HomeController@service');
+Route::get('/about','App\Http\Controllers\HomeController@about');
+Route::get('/contact','App\Http\Controllers\HomeController@contact');
+Route::get('/login','App\Http\Controllers\HomeController@login');

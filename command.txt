@@ -18,3 +18,5 @@ composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
 
 #การสร้าง controller คำสั่ง php artisan make:controller HomeController
 #จะเกิดไฟล์ ที่ app\Http\Controllers\HomeController.php
+
+
