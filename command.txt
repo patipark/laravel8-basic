@@ -1,2 +1,6 @@
 #สร้าง project laravel ด้วยคำสั่ง
 composer create-project  laravel/laravel laravel8vuejs3 --prefer-dist
+
+#แก้ไขไฟล์ C:\Windows\System32\drivers\etc\hosts
+เพิ่ม 127.0.0.1       laravel8vuejs3.site
+
