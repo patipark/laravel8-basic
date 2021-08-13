@@ -50,3 +50,10 @@ Migrated:  2019_08_19_000000_create_failed_jobs_table (15.98ms)
 # คำสั่ง rollback และ run (ลบและสร้างในคำสั่งเดียวกัน)
 # php artisan migrate:refresh
 
+#หลังจาก rollback แล้วลอง แก้ไขไฟล์ database\migrations\2014_10_12_000000_create_users_table.php แก้ไขโครงสร้างใหม่และ แล้วลอง php artisan migrate ผลลัพธ์จะเกิด ตารางใหม่ตามโครงสร้างใหม่. (จะ error หากไม่ได้ rollback)
+
+#การสร้าง Migration ใหม่ ด้วยคำสั่ง php artisan make:migration create_ชื่อตาราง_table เช่น
+php artisan make:migration create_employees_table
+ผลลัพธ์จะเกิดไฟล์ database\migrations\2021_08_13_154700_create_employees_table.php ขึ้น
+
+
