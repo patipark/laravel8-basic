@@ -89,6 +89,7 @@ Route::post('product', function () {
 // Route::get('/login','App\Http\Controllers\HomeController@login');
 
 ##### การ send route to controller แบบ use namespace class controller ไว้ด้านบน ของ Laravel 8 (แนะนำแบบนี้)
+// // แก้ไขไฟล์ app/Providers/RouteServiceProvider.php uncomment บรรทัดที่ 29  protected $namespace = 'App\\Http\\Controllers' จะทำให้สามารถเขียนแบบเก่าได้;
 Route::get('/',[ HomeController::class , 'home']); // version 8 up
 Route::get('/service',[ HomeController::class , 'service']);
 Route::get('/about',[ HomeController::class , 'about']);
