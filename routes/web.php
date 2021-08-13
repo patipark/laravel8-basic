@@ -62,3 +62,8 @@ Route::get('category/{name}', function ($name) {
 Route::get('group/{id}', function ($id) {
     return 'Category name=' . $id;
 })->where(['id' => '[0-9]+']);
+
+// alias route ==> http://xxxxxxxxx/newurl/travel  (name=travel)
+Route::get('product/category/set/{name}', function ($name) {
+    return 'Category name=' . $name;
+})->name('newurl');
