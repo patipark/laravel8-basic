@@ -17,3 +17,23 @@ Route::get('/', function () {
     // return view('welcome');
     return 'This is home page route';
 });
+
+# http://xxxxxxxx/about
+Route::get('about', function () {
+    return 'About page';
+});
+
+# http://xxxxxxxx/service
+Route::get('service', function () {
+    return 'Service page';
+});
+
+# http://xxxxxxxx/contact
+Route::get('contact', function () {
+    return 'Contact page';
+});
+
+# http://xxxxxxxx/login
+Route::get('login', function () {
+    return 'Lgin page';
+});
