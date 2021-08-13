@@ -42,3 +42,8 @@ Route::get('login', function () {
 Route::get('user/{id}', function ($id) {
     return 'User page id=' . $id;
 });
+
+# route แบบมี parameter และแบบ option คือส่งหรือไม่ส่งไปก็ได้
+Route::get('member/{id?}', function ($id = null) {
+    return 'Member page id=' . ($id ?? '');
+});
