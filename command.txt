@@ -56,4 +56,9 @@ Migrated:  2019_08_19_000000_create_failed_jobs_table (15.98ms)
 php artisan make:migration create_employees_table
 ผลลัพธ์จะเกิดไฟล์ database\migrations\2021_08_13_154700_create_employees_table.php ขึ้น
 
+#แก้ไขโครงสร้าง ไฟล์ 2021_08_13_154700_create_employees_table.php ใหม่แล้วรัน php artisan migrate อีกที ผลลัพธ์จะเกิดตาราง employees ขึ้น
+Migrating: 2021_08_13_154700_create_employees_table
+Migrated:  2021_08_13_154700_create_employees_table (19.40ms)
+
+
 
