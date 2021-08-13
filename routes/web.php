@@ -67,3 +67,9 @@ Route::get('group/{id}', function ($id) {
 Route::get('product/category/set/{name}', function ($name) {
     return 'Category name=' . $name;
 })->name('newurl');
+
+
+#การแสดง csrf token ของ laravel เพื่อนำไปใส่ใน header แนบส่งมากับ requet เมื่อต้องการเข้าถึงด้วย method post หรือ method อื่นๆที่ laravel บังคับให้ต้องแนบ csrf มาทุกครั้ง
+Route::get('/csrf', function () {
+    return csrf_token();
+});
