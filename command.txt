@@ -63,3 +63,8 @@ Migrated:  2021_08_13_154700_create_employees_table (19.40ms)
 #การสร้าง seeders (การใส่ข้อมุลในตาราง) ด้วยคำสั่ง php artisan make:seeder EmployeesSeeder โดยในที่นี้คือจะทำการ seed ข้อมูลเข้าไปในตาราง employees จึงตั้งชื่อ class ว่า EmployeesSeeder
 ผลจะเกิดไฟล์ database\seeders\EmployeesSeeder.php 
 
+#แก้ไขไฟล์ database\seeders\DatabaseSeeder.php ให้ call class EmployeesSeeder
+#แก้ไขไฟล์ database\seeders\EmployeesSeeder.php และทำการรันคำสั่ง php artisan db:seed ผลลัพธ์จะเกิดข้อมุลในตาราง employees
+Seeding: Database\Seeders\EmployeesSeeder
+Seeded:  Database\Seeders\EmployeesSeeder (16.43ms)
+Database seeding completed successfully.
