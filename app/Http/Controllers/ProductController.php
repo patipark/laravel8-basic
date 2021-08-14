@@ -49,7 +49,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        return [
+            'name' => 'show',
+            'id' => $id,
+        ];
     }
 
     /**
@@ -60,7 +63,10 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        return [
+            'name' => 'edit',
+            'id' => $id,
+        ];
     }
 
     /**
@@ -72,7 +78,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return [
+            'name' => 'update',
+            'id' => $id,
+            'payload' => $request->all(),
+        ];
     }
 
     /**
@@ -83,6 +93,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return [
+            'name' => 'destroy',
+            'id' => $id,
+        ];
     }
 }
