@@ -115,13 +115,16 @@ class EmployeeController extends Controller
 
         // การแก้ไขข้อมูลเข้าไปในตาราง --------------------------------------------
 
-        $data = array(
-            'email' => 'samitkkkk@gmail.com',
-            'tel' => '077777777777',
-            'age' => 47
-        );
+        // $data = array(
+        //     'email' => 'samitkkkk@gmail.com',
+        //     'tel' => '077777777777',
+        //     'age' => 47
+        // );
 
-        $employees = Employee::where('id',10)->update($data);
+        // $employees = Employee::where('id',10)->update($data);
+
+         // การลบข้อมูลเข้าไปในตาราง --------------------------------------------
+        $employees = Employee::where('id',7000)->delete();
 
         return $employees;
     }
