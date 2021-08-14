@@ -31,7 +31,13 @@ class EmployeeController extends Controller
         // $employees = DB::table('employees')->find(3); // select * from employees where id='3'
 
         // การนับจำนวน record
-        $employees = DB::table('employees')->count();
+        // $employees = DB::table('employees')->count();
+
+        // การหาค่าสูงสุด ต่ำสุด และค่าเฉลี่ย
+        $employees = DB::table('employees')->max('age');
+        $employees = DB::table('employees')->min('age');
+        $employees = DB::table('employees')->avg('age');
+
         return $employees;
     }
 }
