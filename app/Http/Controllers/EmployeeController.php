@@ -28,8 +28,10 @@ class EmployeeController extends Controller
         //                     ->first();
 
         // ค้นหาโดยระบุ id โดยตรง
-        $employees = DB::table('employees')->find(3); // select * from employees where id='3'
+        // $employees = DB::table('employees')->find(3); // select * from employees where id='3'
 
+        // การนับจำนวน record
+        $employees = DB::table('employees')->count();
         return $employees;
     }
 }
