@@ -13,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return 'Hello Product Index'; // return html format
     }
 
     /**
