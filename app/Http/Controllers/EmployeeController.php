@@ -59,15 +59,18 @@ class EmployeeController extends Controller
 
         // $employees = DB::table('employees')->insert($data);
 
-         // การแก้ไขข้อมูลเข้าไปในตาราง --------------------------------------------
-        $data = array(
-            'email' => 'samitkk@gmail.com',
-            'tel' => '02222333444',
-            'age' => 42
-        );
+        //  // การแก้ไขข้อมูลเข้าไปในตาราง --------------------------------------------
+        // $data = array(
+        //     'email' => 'samitkk@gmail.com',
+        //     'tel' => '02222333444',
+        //     'age' => 42
+        // );
 
-        $employees = DB::table('employees')->where('id', 3)->update($data);
+        // $employees = DB::table('employees')->where('id', 3)->update($data);
 
+
+         // การลบข้อมูลเข้าไปในตาราง --------------------------------------------
+         $employees = DB::table('employees')->where('id', 70000)->delete();
 
         return $employees;
     }
