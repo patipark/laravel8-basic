@@ -98,4 +98,10 @@ class ProductController extends Controller
             'id' => $id,
         ];
     }
+
+
+    /** ค้นหาข้อมูล */
+    public function search($keyword){
+        return ['name'=>'search', 'keyword'=>$keyword];
+    }
 }
