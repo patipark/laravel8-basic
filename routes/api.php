@@ -19,5 +19,6 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/product',[ProductController::class , 'index']);
-Route::post('/product',[ProductController::class , 'store']);
+// Route::get('/product',[ProductController::class , 'index']);
+// Route::post('/product',[ProductController::class , 'store']);
+Route::resource('product', ProductController::class);
