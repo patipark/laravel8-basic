@@ -34,9 +34,16 @@ class EmployeeController extends Controller
         // $employees = DB::table('employees')->count();
 
         // การหาค่าสูงสุด ต่ำสุด และค่าเฉลี่ย
-        $employees = DB::table('employees')->max('age');
-        $employees = DB::table('employees')->min('age');
-        $employees = DB::table('employees')->avg('age');
+        // $employees = DB::table('employees')->max('age');
+        // $employees = DB::table('employees')->min('age');
+        // $employees = DB::table('employees')->avg('age');
+
+
+        // การจัดเรียนข้อมูล และการเลือกข้อมูลบางส่วน (limit)
+        $employees = DB::table('employees')->orderBy('age')->get(); // order asc
+        $employees = DB::table('employees')->orderByDesc('age')->get(); // order desc
+        $employees = DB::table('employees')->orderByDesc('age')->limit(2)->get();
+
 
         return $employees;
     }
