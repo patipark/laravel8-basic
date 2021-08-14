@@ -76,3 +76,6 @@ Database seeding completed successfully.
 
 #สร้าง controller ใหม่โดยเพิ่ม --resource ในที่นี้ php artisan make:controller ProductController --resource
 จะเกิดไฟล์ app\Http\Controllers\ProductController.php และในไฟล์จะทำการสร้าง method ที่เป็นโครงการทำ CRUD ไว้ให้เลย 7 method
+
+#php artisan route:list
+#php artisan route:list --path=api

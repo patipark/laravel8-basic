@@ -35,7 +35,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return [
+            'name' => 'store',
+            'payload' => $request->all(),
+        ];
     }
 
     /**
