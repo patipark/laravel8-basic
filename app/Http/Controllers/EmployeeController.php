@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\DB;
 class EmployeeController extends Controller
 {
     //
-    public function dbbuilder(){
+    public function dbbuilder()
+    {
         // อ่านข้อมูลทั้งหมดจากตาราง employees โดยจะคืนค่าเป็น json data
         // $employees = DB::table('employees')->get(); // select * from employees
 
@@ -70,7 +71,7 @@ class EmployeeController extends Controller
         // $employees = DB::table('employees')->where('id', 3)->update($data);
 
 
-         // การลบข้อมูลเข้าไปในตาราง --------------------------------------------
+        // การลบข้อมูลเข้าไปในตาราง --------------------------------------------
         //  $employees = DB::table('employees')->where('id', 70000)->delete();
 
         $employees = DB::table('employees')->get();
@@ -88,10 +89,14 @@ class EmployeeController extends Controller
         // $employees = Employee::first();
         // $employees = Employee::first(['id','fullname']);
 
-         // อ่านข้อมูลแบบระบุเงื่อนไข
-        $employees = Employee::where('id',3)->get();
-        $employees = Employee::where('age', '>=', 27)->get();
+        // อ่านข้อมูลแบบระบุเงื่อนไข
+        // $employees = Employee::where('id', 3)->get();
+        // $employees = Employee::where('age', '>=', 27)->get();
 
+        // การจัดเรียนข้อมูล และการเลือกข้อมูลบางส่วน
+        $employees = Employee::where('age', '>=', 27)
+            ->orderByDesc('age')
+            ->get();
 
         return $employees;
     }
