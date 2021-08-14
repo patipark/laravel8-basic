@@ -21,11 +21,14 @@ class EmployeeController extends Controller
         // อ่านข้อมูลแบบระบุเงื่อนไข
         // $employees = DB::table('employees')->where('id', 2)->get();
         // $employees = DB::table('employees')->where('id', '>=', 2)->get(['id','fullname','email']);
-        $employees = DB::table('employees')
-                            ->where('id', 2)
-                            ->where('status',1)
-                            ->orWhere('age',20)
-                            ->first();
+        // $employees = DB::table('employees')
+        //                     ->where('id', 2)
+        //                     ->where('status',1)
+        //                     ->orWhere('age',20)
+        //                     ->first();
+
+        // ค้นหาโดยระบุ id โดยตรง
+        $employees = DB::table('employees')->find(3); // select * from employees where id='3'
 
         return $employees;
     }
