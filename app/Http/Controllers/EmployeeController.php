@@ -16,7 +16,11 @@ class EmployeeController extends Controller
         // $employees = DB::table('employees')->first(); // select * from employees limit 1
 
         // อ่านข้อมูลแบบระบุ field ที่ต้องการ
-        $employees = DB::table('employees')->first(['fullname','gender','email']); // select fullname, gender, email from employees
+        // $employees = DB::table('employees')->first(['fullname','gender','email']); // select fullname, gender, email from employees
+
+        // อ่านข้อมูลแบบระบุเงื่อนไข
+        $employees = DB::table('employees')->where('id', 2)->get();
+        $employees = DB::table('employees')->where('id', '>=', 2)->get(['id','fullname','email']);
 
         return $employees;
     }
