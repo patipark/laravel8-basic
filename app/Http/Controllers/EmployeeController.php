@@ -85,7 +85,13 @@ class EmployeeController extends Controller
         // $employees = Employee::all(['id','fullname']);
 
         // อ่านข้อมูลเพียงรายการเดียวจากตาราง employees
-        $employees = Employee::first(['id','fullname']);
+        // $employees = Employee::first();
+        // $employees = Employee::first(['id','fullname']);
+
+         // อ่านข้อมูลแบบระบุเงื่อนไข
+        $employees = Employee::where('id',3)->get();
+        $employees = Employee::where('age', '>=', 27)->get();
+
 
         return $employees;
     }
