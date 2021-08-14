@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -76,5 +77,13 @@ class EmployeeController extends Controller
         return $employees;
     }
 
+    public function usemodel()
+    {
+        # การใช้งาน Model
+        // อ่านข้อมูลทั้งหมดจากตาราง employees
+        $employees = Employee::all(); // select * from employees
+        $employees = Employee::all(['id','fullname']);
 
+        return $employees;
+    }
 }
