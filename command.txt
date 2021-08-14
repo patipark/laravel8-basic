@@ -44,7 +44,7 @@ Migrated:  2014_10_12_100000_create_password_resets_table (14.64ms)
 Migrating: 2019_08_19_000000_create_failed_jobs_table
 Migrated:  2019_08_19_000000_create_failed_jobs_table (15.98ms)
 
-# คำสั่ง Rollback Migrations (ลบตารางออกจากฐานข้อมูล) 
+# คำสั่ง Rollback Migrations (ลบตารางออกจากฐานข้อมูล)
 # php artisan migrate:rollback
 
 # คำสั่ง rollback และ run (ลบและสร้างในคำสั่งเดียวกัน)
@@ -61,7 +61,7 @@ Migrating: 2021_08_13_154700_create_employees_table
 Migrated:  2021_08_13_154700_create_employees_table (19.40ms)
 
 #การสร้าง seeders (การใส่ข้อมุลในตาราง) ด้วยคำสั่ง php artisan make:seeder EmployeesSeeder โดยในที่นี้คือจะทำการ seed ข้อมูลเข้าไปในตาราง employees จึงตั้งชื่อ class ว่า EmployeesSeeder
-ผลจะเกิดไฟล์ database\seeders\EmployeesSeeder.php 
+ผลจะเกิดไฟล์ database\seeders\EmployeesSeeder.php
 
 #แก้ไขไฟล์ database\seeders\DatabaseSeeder.php ให้ call class EmployeesSeeder
 #แก้ไขไฟล์ database\seeders\EmployeesSeeder.php และทำการรันคำสั่ง php artisan db:seed ผลลัพธ์จะเกิดข้อมุลในตาราง employees
@@ -70,3 +70,6 @@ Seeded:  Database\Seeders\EmployeesSeeder (16.43ms)
 Database seeding completed successfully.
 
 # คำสั่งการสร้าง migration และ db:seed พร้อมกัน php artisan migrate:fresh --seed
+
+#สร้าง  controller ใหม่โดยร้น php artisan make:controller EmployeeController เพื่อใช้ในการทดสอบตาราง employee
+#สร้าง models\Employee.php
