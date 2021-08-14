@@ -128,4 +128,13 @@ class EmployeeController extends Controller
 
         return $employees;
     }
+
+    public function viewdata()
+    {
+        // การส่งข้อมูลไปยัง View
+         // $employees = Employee::all(); // select * from employees
+         $employees = Employee::paginate(10);
+         return view('pages.employee.employeelist', compact('employees'));
+    }
 }
+
