@@ -40,10 +40,24 @@ class EmployeeController extends Controller
 
 
         // การจัดเรียนข้อมูล และการเลือกข้อมูลบางส่วน (limit)
-        $employees = DB::table('employees')->orderBy('age')->get(); // order asc
-        $employees = DB::table('employees')->orderByDesc('age')->get(); // order desc
-        $employees = DB::table('employees')->orderByDesc('age')->limit(2)->get();
+        // $employees = DB::table('employees')->orderBy('age')->get(); // order asc
+        // $employees = DB::table('employees')->orderByDesc('age')->get(); // order desc
+        // $employees = DB::table('employees')->orderByDesc('age')->limit(2)->get();
 
+
+        // การเพิ่มข้อมูลเข้าไปในตาราง --------------------------------------------
+        $data = array(
+            'fullname' => 'Samit Koyom',
+            'gender' => 'Male',
+            'email' => 'samit@email.com',
+            'tel' => '0898938889389',
+            'age' => 38,
+            'address' => '20/2 moo.2 bangkok',
+            'avartar' => 'noavatar.jpg',
+            'status' => 1
+        );
+
+        $employees = DB::table('employees')->insert($data);
 
         return $employees;
     }
