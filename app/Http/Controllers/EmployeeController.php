@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class EmployeeController extends Controller
 {
     //
-    public function index(){
+    public function dbbuilder(){
         // อ่านข้อมูลทั้งหมดจากตาราง employees โดยจะคืนค่าเป็น json data
         // $employees = DB::table('employees')->get(); // select * from employees
 
@@ -70,8 +70,11 @@ class EmployeeController extends Controller
 
 
          // การลบข้อมูลเข้าไปในตาราง --------------------------------------------
-         $employees = DB::table('employees')->where('id', 70000)->delete();
+        //  $employees = DB::table('employees')->where('id', 70000)->delete();
 
+        $employees = DB::table('employees')->get();
         return $employees;
     }
+
+
 }

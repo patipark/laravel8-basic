@@ -97,5 +97,6 @@ Route::get('/about',[ HomeController::class , 'about']);
 Route::get('/contact',[ HomeController::class , 'contact']);
 Route::get('/login',[ HomeController::class , 'login']);
 
-Route::get('/employee',[ EmployeeController::class , 'index']);
+Route::get('/employee/dbbuilder',[ EmployeeController::class , 'dbbuilder']);
+Route::get('/employee/usemodel',[ EmployeeController::class , 'usemodel']);
 
