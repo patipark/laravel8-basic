@@ -129,7 +129,7 @@ class EmployeeController extends Controller
         return $employees;
     }
 
-    public function viewdata()
+    public function index()
     {
         // การส่งข้อมูลไปยัง View
          // $employees = Employee::all(); // select * from employees
