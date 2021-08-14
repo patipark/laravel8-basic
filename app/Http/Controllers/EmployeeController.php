@@ -81,8 +81,11 @@ class EmployeeController extends Controller
     {
         # การใช้งาน Model
         // อ่านข้อมูลทั้งหมดจากตาราง employees
-        $employees = Employee::all(); // select * from employees
-        $employees = Employee::all(['id','fullname']);
+        // $employees = Employee::all(); // select * from employees
+        // $employees = Employee::all(['id','fullname']);
+
+        // อ่านข้อมูลเพียงรายการเดียวจากตาราง employees
+        $employees = Employee::first(['id','fullname']);
 
         return $employees;
     }
